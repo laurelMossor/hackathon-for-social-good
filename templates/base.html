@@ -5,14 +5,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <!-- Title at top of Browser -->
     <title>{% block title %} TITLE GOES HERE {% endblock %}</title>
 
-
+    <!-- Stylesheet  -->
+    <link rel="stylesheet" href="/static/css/stylesheet.css">
 
     {% block js %}
     {% endblock %}
+
 </head>
 <body>
+    
+    
+    {% block content %} BODY CONTENT GOES HERE {% endblock %}
 
 
 </body>
