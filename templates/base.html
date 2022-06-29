@@ -8,7 +8,10 @@
     <!-- Title at top of Browser -->
     <title>{% block title %} TITLE GOES HERE {% endblock %}</title>
 
-    <!-- Stylesheet  -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Internal Stylesheet  -->
     <link rel="stylesheet" href="/static/css/stylesheet.css">
 
     {% block js %}
@@ -16,12 +19,15 @@
 
 </head>
 <body>
-    
-    
     {% block content %} BODY CONTENT GOES HERE {% endblock %}
 
+    <!-- Bootstrap JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
-
+<footer>
+    Women Who Code: Hackathon for Social Good 2022 <br>
+    Laurel Mossor, Jolene Glenn, Jenni [lastname?], Jordyn Taylor, & Leilani Quesada
+</footer>
 
 </html>

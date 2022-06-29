@@ -16,4 +16,5 @@ def homepage():
 ###########################################################
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
-    # In debug mode, page will be updated when code is changed 
+    # In debug mode, page will be updated when code is changed
+    # To change, debug=False 
