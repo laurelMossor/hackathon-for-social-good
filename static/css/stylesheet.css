@@ -1,6 +1,7 @@
 body {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 1rem;
+    background: linear-gradient(180deg, #7DD4D9 0%, #7DD9B9 100%);
 }
 
 h1, h2, h3, h4, .btn {
@@ -20,8 +21,9 @@ nav {
     background-color: #fff;
 }
 
-body {
-    background: linear-gradient(180deg, #7DD4D9 0%, #7DD9B9 100%);
+main {
+    background: transparent url('/static/GradientShapes.png') no-repeat center;
+    background-size: 100%;
 }
 
 .boxShadow {
@@ -40,12 +42,15 @@ body {
     background: #3ABB9D;
 }
 
+
+
 footer {
     padding: 35px;
     text-align: center;
+    background-color: #fff;
 }
 /* styling created for footer; note, class not used, will apply to all a elements */
 footer a:link, footer a:hover, footer a:visited, footer a:active {
     text-decoration: none;
-    color: black;
+    color: rgb(97, 97, 97);
 }

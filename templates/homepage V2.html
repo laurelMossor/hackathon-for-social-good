@@ -51,47 +51,78 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
         </div>
     </div>
 </nav>
-<div class="intro">
-    <h1>Feeling out of sorts? You are not alone.</h1>
-    <p>Here is a bunch of text. The quick brown fox jumped over the lazy dog most expiditiuosly. He ran like the dickens.</p>
+
+<main>
+    <div class="intro">
+        <h1>Feeling out of sorts? You are not alone.</h1>
+        <p>Here is a bunch of text. The quick brown fox jumped over the lazy dog most expiditiuosly. He ran like the dickens.</p>
+    </div>
+    {# viz 1#}
+    <div class="container-fluid">
+        <div class="row boxShadow m-2 my-4" id="vis-1">
+            <div class="col-md-9" id="column-1a"><a name="pulseData"></a>
+                <div id="vizContainer1"></div>
+            </div>
+            <div class="col-md-3 text-right" id="column-1b">
+                <h5>[2-3 sentences, context and references]</h5>
+                <p>"Learn more" button brings modal from the left</p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pulseDataModal">Learn More</button>
+                    
+
+            </div>
+        </div>
+        <div class="row boxShadow m-2 my-4" id="vis-2">
+            <div class="col-md-3" id="column-2a"><a name="diagnoses"></a>
+                <h5>[2-3 sentences, context and references]</h5>
+                <p>"Learn more" button brings modal from the right</p>
+            </div>
+            <div class="col-md-9" id="column-2b">
+                <div id="vizContainer2"></div>
+            </div>
+        </div>
+        <div class="row boxShadow m-2 my-4" id="vis-1">
+            <div class="col-md-9" id="column-3a"><a name="stateFacilities"> </a>
+                <div id="vizContainer3"></div>
+            </div>
+            <div class="col-md-3 text-right" id="column-3b">
+                <h5>[2-3 sentences, context and references]</h5>
+                <p>"Learn more" button brings modal from the left</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+<div class="conclusion">
+        <h1>Thanks for visiting.</h1>
+        <p>There's help and steaks and fries and chicken pies and typing lots of words for fun to take up space. The quick brown fox jumped over the lazy dog. Lorem ipsum talcum powder.</p>
 </div>
-{# viz 1#}
-<div class="container-fluid">
-    <div class="row" id="vis-1">
-        <div class="col-md-9" id="column-1a"><a name="pulseData"></a>
-            <div id="vizContainer1"></div>
-        </div>
-        <div class="col-md-3 text-right" id="column-1b">
-            <h5>[2-3 sentences, context and references]</h5>
-            <p>"Learn more" button brings modal from the left</p>
-        </div>
-    </div>
-    <div class="row" id="vis-2">
-        <div class="col-md-3" id="column-2a"><a name="diagnoses"></a>
-            <h5>[2-3 sentences, context and references]</h5>
-            <p>"Learn more" button brings modal from the right</p>
-        </div>
-        <div class="col-md-9" id="column-2b">
-            <div id="vizContainer2"></div>
-        </div>
-    </div>
-    <div class="row" id="vis-1">
-        <div class="col-md-9" id="column-3a"><a name="stateFacilities"> </a>
-            <div id="vizContainer3"></div>
-        </div>
-        <div class="col-md-3 text-right" id="column-3b">
-            <h5>[2-3 sentences, context and references]</h5>
-            <p>"Learn more" button brings modal from the left</p>
+{# modals #}
+<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="pulseData">
+            Here is additional information regarding the link related to pulse Data.
         </div>
     </div>
 </div>
 
+<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="pulseData">
+            Here is additional information regarding the link related to pulse Data.
+        </div>
+    </div>
+</div>
 
-
-
-
-
-
+<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="pulseData">
+            Here is additional information regarding the link related to pulse Data.
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
     initViz("vizContainer1","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link");
     initViz("vizContainer2","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link");
