@@ -14,6 +14,10 @@
     <!-- Internal Stylesheet  -->
     <link rel="stylesheet" href="/static/css/stylesheet.css">
 
+    <!-- Tableau API Embed -->
+    
+        
+
     {% block js %}
     {% endblock %}
 
@@ -23,11 +27,17 @@
 
     <!-- Bootstrap JS file -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
+    
+    <img src="{{url_for('static', filename='Group-bro.png')}}" />
+    <footer>
+        <a href="https://www.womenwhocode.com/hackathon-social-good" class="hackathon-link">Women Who Code: Hackathon for Social Good 2022 </a><br>
+        <a href="https://www.linkedin.com/in/laurelmossor/" class="linkedin">Laurel Mossor</a> | 
+        <a href="https://www.linkedin.com/in/jolene-glenn/" class="linkedin">Jolene Glenn</a> | 
+        <a href="https://www.linkedin.com/in/jennifer-argote/" class="linkedin">Jenni Argote</a> | 
+        <a href="https://www.linkedin.com/in/jordyntaylor96/" class="linkedin">Jordyn Taylor</a> | 
+        <a href="https://www.linkedin.com/in/leilaniquesada/" class="linkedin">Leilani Quesada</a>
+    </footer>
 </body>
-<footer>
-    Women Who Code: Hackathon for Social Good 2022 <br>
-    Laurel Mossor, Jolene Glenn, Jenni Argote, Jordyn Taylor, & Leilani Quesada
-</footer>
+
 
 </html>

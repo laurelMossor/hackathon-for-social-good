@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block title %}Hackthon for Social Good{% endblock %}
+
+<!-- page specific JS -->
+{% block js %}
+
+<!-- Tableau-JS API -->
+<!-- <script src="https://2021.4/javascripts/api/tableau-2.min.js"></script> -->
+<!-- <script type="text/javascript"
+src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
+<script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+
+<!-- TODO: PUT THIS INSIDE A BOOTSTRAPPY DIV VIZ 1-->
+<script type="text/javascript"> 
+    function initViz(elementId, vizUrl) {
+        var containerDiv = document.getElementById(elementId),
+        url = vizUrl,
+        options = {
+            hideTabs: true,
+            onFirstInteractive: function () {
+                console.log("Run this code when the viz has finished loading.");
+            }
+        };
+        var viz = new tableau.Viz(containerDiv, url, options);
+    // Create a viz object and embed it in the container div.
+    }
+</script>
+
+{% endblock %}
+<!-- body content -->
+{% block content %}
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Project Name</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#pulseData">Mental Health Care Indicator Tracking</a>  
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#diagnoses">Diagnoses</a> 
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#stateFacilities">State Facilities</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
+<div class="intro">
+    <h1>Feeling out of sorts? You are not alone.</h1>
+    <p>Here is a bunch of text. The quick brown fox jumped over the lazy dog most expiditiuosly. He ran like the dickens.</p>
+</div>
+{# viz 1#}
+<div class="container-fluid">
+    <div class="row" id="vis-1">
+        <div class="col-md-9" id="column-1a"><a name="pulseData"></a>
+            <div id="vizContainer1"></div>
+        </div>
+        <div class="col-md-3 text-right" id="column-1b">
+            <h5>[2-3 sentences, context and references]</h5>
+            <p>"Learn more" button brings modal from the left</p>
+        </div>
+    </div>
+    <div class="row" id="vis-2">
+        <div class="col-md-3" id="column-2a"><a name="diagnoses"></a>
+            <h5>[2-3 sentences, context and references]</h5>
+            <p>"Learn more" button brings modal from the right</p>
+        </div>
+        <div class="col-md-9" id="column-2b">
+            <div id="vizContainer2"></div>
+        </div>
+    </div>
+    <div class="row" id="vis-1">
+        <div class="col-md-9" id="column-3a"><a name="stateFacilities"> </a>
+            <div id="vizContainer3"></div>
+        </div>
+        <div class="col-md-3 text-right" id="column-3b">
+            <h5>[2-3 sentences, context and references]</h5>
+            <p>"Learn more" button brings modal from the left</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+    initViz("vizContainer1","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link");
+    initViz("vizContainer2","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link");
+    initViz("vizContainer3","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet3?:language=en-US&:display_count=n&:origin=viz_share_link");
+
+</script>
+
+<script src="/static/js/homepage.js"></script>
+
+{% endblock %}
