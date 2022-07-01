@@ -1,0 +1,56 @@
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background: linear-gradient(180deg, #7DD4D9 0%, #7DD9B9 100%);
+}
+
+h1, h2, h3, h4, .btn {
+    font-family: Calistoga, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+nav {
+    padding: 20px 40px;
+    background-color: #fff;
+}
+
+main {
+    background: transparent url('/static/GradientShapes.png') no-repeat center;
+    background-size: 100%;
+}
+
+.boxShadow {
+    background: #fff;
+    border: 1px solid #cacaca;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+}
+
+.btn {
+    font-size: 1.25rem;
+    padding: 17px 71px;
+}
+
+.btn.wwcPrimaryBtn {
+    background: #3ABB9D;
+}
+
+
+
+footer {
+    padding: 35px;
+    text-align: center;
+    background-color: #fff;
+}
+/* styling created for footer; note, class not used, will apply to all a elements */
+footer a:link, footer a:hover, footer a:visited, footer a:active {
+    text-decoration: none;
+    color: rgb(97, 97, 97);
+}
