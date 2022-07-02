@@ -16,7 +16,7 @@ h2 {
     font-size: 2rem;
 }
 
-h5 {
+h5, h6 {
     font-family: 'Calistoga';
     font-size: 1.5rem;
 }

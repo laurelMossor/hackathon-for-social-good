@@ -6,9 +6,6 @@
 {% block js %}
 
 <!-- Tableau-JS API -->
-<!-- <script src="https://2021.4/javascripts/api/tableau-2.min.js"></script> -->
-<!-- <script type="text/javascript"
-src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
 <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
 <!-- TODO: PUT THIS INSIDE A BOOTSTRAPPY DIV VIZ 1-->
@@ -47,13 +44,13 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
                 <a class="nav-link" aria-current="page" href="#pulseDataChart">Mental Health Care Indicator Tracking</a>  
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#diagnosesChart">Diagnoses</a> 
+                <a class="nav-link" href="#diagnosesChart">Mental Health Diagnoses 2014-2019</a> 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#stateFacilitiesChart">State Facilities</a>
+                <a class="nav-link" href="#stateFacilitiesChart">Mental Health Treatment Facilities</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#facilitiesPerPopulationChart">Mental Health Facilities per Population</a>
+                <a class="nav-link" href="#facilitiesPerPopulationChart">Facilities per US State Population</a>
             </li>
         </ul>
         </div>
@@ -64,7 +61,7 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
     <div class="container-fluid">
         <div class="row boxShadow mx-2 my-4">
             <div class="col-12" id="intro">
-                <h1>Feeling out of sorts? You are not alone.</h1>
+                <h1 class="text-center">You are not alone</h1>
             </div>
         </div>
         <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-1">
@@ -75,7 +72,7 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
             <div class="col-lg-3 text-right info-text mt-5 mt-lg-2" id="column-1b">
                 <h5>Consider the impact that the pandemic has had on us all. </h5>
                 <p>Very early on, the National Center for Health Statistics began to capture the more personal effects of increased stress and isolation on the national population. A slight upward trend in use of mental health care can be seen here, and it’s no surprise. If you’ve felt the weight of the world grow heavier, you’re not alone. </p>
-                <p>Centers for Disease Control and Prevention. (2022). <em>Mental Health Care in the Last 4 Weeks</em>. Retrieved June 27, 2022 from https://catalog.data.gov/dataset/mental-health-care-in-the-last-4-weeks</p>
+                <p class="small">Centers for Disease Control and Prevention. (2022). <em>Mental Health Care in the Last 4 Weeks</em>. Retrieved June 27, 2022 from <a href="https://catalog.data.gov/dataset/mental-health-care-in-the-last-4-weeks">source</a></p>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#pulseDataModal" id="btn-pulseDataModal" class="btn btn-primary">Learn More</a>
                 <div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -97,14 +94,20 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
         </div>
         <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-2">
             <div class="col-lg-3 info-text order-2 order-lg-1 mt-5 mt-lg-2" id="column-2a"><a name="diagnosesChart"></a>
-                <h5>[2-3 sentences, context and references]</h5>
-                <p>"Learn more" button brings modal from the right</p>
+                <h5>Mental illness is more common than you might think.</h5>
+                <p>1 in 5 people in the U.S. have a mental health diagnosis, and everyone experiences symptoms of mental health from time to time such as feeling sad or down, having difficulty concentrating, or problems sleeping. A mental illness, or a mental health diagnosis, is simply a cluster of related symptoms that cause a person distress in particular ways.</p>
+                <p class="small">Department of Health and Human Services: Substance Abuse and Mental Health Services Administration. (2021). <em>Mental Health Annual Report: 2014–2019 Use of Mental Health Services: National Client-Level Data. </em>Retrieved on June 27, 2022 from <a href="https://www.samhsa.gov/data/sites/default/files/reports/rpt35253/MHCLD-2019-R-FINAL.pdf">source</a></p>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#diagnosesModal" id="btn-diagnosesModal" class="btn btn-primary">Learn More</a>
                 <div class="modal fade bd-example-modal-lg" id="diagnosesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content" id="diagnoses">
                             <div class="modal-body">
-                                Here is additional information regarding the link related to diagnoses.
+                                <p>Did you know that half of mental health issues begin by age 14 and 75% begin by age 24? 67% of people 18-24 with anxiety or depression 
+                                    don't seek treatment <a href="https://www.activeminds.org/about-mental-health/statistics/">[source]</a>. 
+                                    Treatment for mental health disorders doesn’t have to mean pharmaceutical medications, but these do help millions of people across the U.S. Treatment can include talking to a therapist or doctor, getting support in learning new skills like meditation or an exercise routine, or other combinations.</p>
+                                <p>Oftentimes, life stressors or difficult situations can impact your mental health for a short duration of time. These situations can pass with time or effort to change your circumstances. When things aren’t getting better, or it feels out of your hands, it may be time to seek out help and support. Check out <a href="https://www.activeminds.org/about-mental-health/stress-or-anxiety/">this helpful graphic</a> to see if it’s just stress, or maybe something more.</p>
+                                <p>The National Alliance on Mental Illness (NAMI) is one of the nation’s leading voices on mental health and wellness, and here you can find beautiful infographics <a href="https://nami.org/NAMI/media/NAMI-Media/Infographics/NAMI_YouAreNotAlone_2020_FINAL.pdf">here</a> and <a href="https://www.nami.org/NAMI/media/NAMI-Media/Infographics/GeneralMHFacts.pdf">here</a> with more information about mental illness in the United States.</p>
+                            
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -123,14 +126,23 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
                 </div>
             </div>
             <div class="col-lg-3 text-right info-text mt-5 mt-lg-2" id="column-3b">
-                <h5>[2-3 sentences, context and references]</h5>
-                <p>"Learn more" button brings modal from the left</p>
+                <!-- <h5>[2-3 sentences, context and references]</h5> -->
+                <p>Mental health treatment facilities treat mental illness and/or substance abuse disorders exclusively, and they can operate as an inpatient (stay at the facility for a short duration, such as a hospital), outpatient (visit the location), or residential (you live there) facility.</p> 
+                    <p>Not all people with mental illness need intensive services, and what you see in the movies is often a dramatic misrepresentation. 
+                    Most services happen by visiting a clinic.</p> 
+                    <p><a href="https://findtreatment.samhsa.gov/">Find a treatment center near you.</a></p>
+                    <p class="small">Substance Abuse and Mental Health Services Administration. (2022). <em>National Directory Of Mental Health Treatment Facilities.</em> Retrieved on June 27, 2022 from <a href="https://www.samhsa.gov/data/report/national-directory-of-mental-health-treatment-facilities">source</a></p>
                 <a href="#" data-bs-toggle="modal" data-bs-target="#stateFacilitiesModal" id="btn-stateFacilitiesModal" class="btn btn-primary">Learn More</a>
                 <div class="modal fade bd-example-modal-lg" id="stateFacilitiesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content" id="stateFacilities">
                             <div class="modal-body">
-                                Here is additional information regarding the link related to state facilities.
+                                <p>This directory includes facilities that responded to the 2021 National Substance Use and Mental Health Services Survey, a yearly survey meant to collect information on resources available around the nation. It’s important to note that this information does not account for all the treatment facilities in the U.S. </p>
+                                <p>Insurance providers in the U.S. are required to cover care for mental illness and substance abuse treatment. That means you have a right to this treatment, and there are steps you can take if that is not the case. 
+                                    The National Alliance on Mental Illness provides a helpful graphic outlining more information on this topic <a href="https://nami.org/NAMI/media/NAMI-Media/Infographics/MHParity10-23-15.pdf">here</a>.</p> 
+                                <p>Don’t have insurance or don’t know how to get it? Find out if you qualify for Medicaid, Medicare, or CHIP <a href="https://www.usa.gov/medicaid">here</a>.
+                                    There are people standing by to help assist you in filling out the forms and understanding the criteria or requirements. </p>
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -140,15 +152,25 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
                 </div>  
             </div>
         </div>
-        <div class="row boxShadow mx-4 my-5" id="vis-4">
-            <div class="col-lg-12" id="column-4b"><a name="facilitiesPerPopulationChart"></a>
-                <div id="vizContainer4">
-                    <object type="image/svg+xml" data="static/Mental_Health_Facilities_per_Population.svg"></object>
+        <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-4">
+            <div class="col-lg-9 order-1 order-lg-2" id="column-4b"><a name="facilitiesPerPopulationChart"></a>
+                <div class="container" id="vizContainer4">
+                    <object width="100%" type="image/svg+xml" data="static/Mental_Health_Facilities_per_Population.svg"></object>
                 </div>
             </div>
-            <div class="col-lg-12 text-right info-text mt-5 mt-lg-2" id="column-4a">
-                <h5>[2-3 sentences, context and references]</h5>
-                <p>"Learn more" button brings modal from the left</p>
+            <div class="col-lg-3 text-right info-text mt-5 mt-lg-2" id="column-4a">
+                <p>By taking the data from the previous directory and comparing it to the total state population, you can see that Alaska actually has the most facilities per population. </p>
+                <p>Additionally, while California has the highest total of facilities in their state, they have a very low facilities per population ranking. That being said, there are limits to this directory and it does not include every mental health facility in the United States, nor does this graph account for the amount of people served by each facility.</p>
+            </div>
+        </div>
+        <div class="row boxShadow mx-2 my-4">
+            <div class="col-12" id="intro">
+                <h3 class="text-center">Organizations we love</h1>
+                <div class="row">
+                    <div class="col-4"><a href="https://mhanational.org/"><img src="static/hackathon-MHA-logo-white.png" class="mx-auto d-block" style="width:150px; vertical-align: middle; margin:auto"></a> </div>
+                    <div class="col-4"><a href="https://www.activeminds.org/"><img src="static/hackathon-ActiveMinds-WhiteAMLogo.png" class="mx-auto d-block" style="width:150px"></a></div>
+                    <div class="col-4"><a href="https://nami.org/Home"><img src="static/hackathon-NAMI-logo-small-2x.png" class="mx-auto d-block" style="width:150px"></a></div>
+                </div>
             </div>
         </div>
     </div>
