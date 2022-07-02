@@ -25,27 +25,35 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
         var viz = new tableau.Viz(containerDiv, url, options);
     // Create a viz object and embed it in the container div.
     }
+    // make "button" for modal information
+    // make modal with divs
+    // click button to display modal
+    // use event handler on button or when clink anchor tag, redirect to target
+
 </script>
 
 {% endblock %}
 <!-- body content -->
 {% block content %}
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Project Name</a>
+        <a class="navbar-brand" href="/">Mental Health Data in the United States</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#pulseData">Mental Health Care Indicator Tracking</a>  
+                <a class="nav-link" aria-current="page" href="#pulseDataChart">Mental Health Care Indicator Tracking</a>  
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#diagnoses">Diagnoses</a> 
+                <a class="nav-link" href="#diagnosesChart">Diagnoses</a> 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#stateFacilities">State Facilities</a>
+                <a class="nav-link" href="#stateFacilitiesChart">State Facilities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#facilitiesPerPopulationChart">Mental Health Facilities per Population</a>
             </li>
         </ul>
         </div>
@@ -53,38 +61,92 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
 </nav>
 
 <main>
-    <div class="intro">
-        <h1>Feeling out of sorts? You are not alone.</h1>
-        <p>Here is a bunch of text. The quick brown fox jumped over the lazy dog most expiditiuosly. He ran like the dickens.</p>
-    </div>
-    {# viz 1#}
     <div class="container-fluid">
-        <div class="row boxShadow m-2 my-4" id="vis-1">
-            <div class="col-md-9" id="column-1a"><a name="pulseData"></a>
-                <div id="vizContainer1"></div>
-            </div>
-            <div class="col-md-3 text-right" id="column-1b">
-                <h5>[2-3 sentences, context and references]</h5>
-                <p>"Learn more" button brings modal from the left</p>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pulseDataModal">Learn More</button>
-                    
-
+        <div class="row boxShadow mx-2 my-4">
+            <div class="col-12" id="intro">
+                <h1>Feeling out of sorts? You are not alone.</h1>
             </div>
         </div>
-        <div class="row boxShadow m-2 my-4" id="vis-2">
-            <div class="col-md-3" id="column-2a"><a name="diagnoses"></a>
+        <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-1">
+            <div class="col-lg-9" id="column-1a"><a name="pulseDataChart"></a>
+                <div id="vizContainer1">
+                </div>
+            </div>
+            <div class="col-lg-3 text-right info-text mt-5 mt-lg-2" id="column-1b">
+                <h5>Consider the impact that the pandemic has had on us all. </h5>
+                <p>Very early on, the National Center for Health Statistics began to capture the more personal effects of increased stress and isolation on the national population. A slight upward trend in use of mental health care can be seen here, and it’s no surprise. If you’ve felt the weight of the world grow heavier, you’re not alone. </p>
+                <p>Centers for Disease Control and Prevention. (2022). <em>Mental Health Care in the Last 4 Weeks</em>. Retrieved June 27, 2022 from https://catalog.data.gov/dataset/mental-health-care-in-the-last-4-weeks</p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#pulseDataModal" id="btn-pulseDataModal" class="btn btn-primary">Learn More</a>
+                <div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="pulseData">
+                            <div class="modal-body">
+                                <p>This line graph represents the percentage of people in the U.S. over 18 that 1) received counseling or therapy, 2) needed counseling or therapy but did not get it, 3) took prescription medication for mental health, or 4) took prescription medication for mental health and/or received counseling or therapy. Data was gathered at different points in time from August 2020 through May 2022, and responses referred to the previous four weeks.</p>
+                                <p>The data was collected through the Household Pulse Survey, conducted by the National Center for Health Statistics (NCHS) which partnered with the Census Bureau to rapidly respond and provide relevant information about the impact of the coronavirus (COVID-19) pandemic in the U.S.</p>
+                                <p>More information about the survey is provided <a href="https://www.cdc.gov/nchs/covid19/pulse/mental-health-care.htm">here</a>.</p>
+                                <p>If you or someone you love is overwhelmed by stress, find resources near you with the National Alliance on Mental Illness <a href="https://nami.org/findsupport">local chapter</a>. </p>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-2">
+            <div class="col-lg-3 info-text order-2 order-lg-1 mt-5 mt-lg-2" id="column-2a"><a name="diagnosesChart"></a>
                 <h5>[2-3 sentences, context and references]</h5>
                 <p>"Learn more" button brings modal from the right</p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#diagnosesModal" id="btn-diagnosesModal" class="btn btn-primary">Learn More</a>
+                <div class="modal fade bd-example-modal-lg" id="diagnosesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="diagnoses">
+                            <div class="modal-body">
+                                Here is additional information regarding the link related to diagnoses.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
-            <div class="col-md-9" id="column-2b">
+            <div class="col-lg-9 order-1 order-lg-2" id="column-2b">
                 <div id="vizContainer2"></div>
             </div>
         </div>
-        <div class="row boxShadow m-2 my-4" id="vis-1">
-            <div class="col-md-9" id="column-3a"><a name="stateFacilities"> </a>
-                <div id="vizContainer3"></div>
+        <div class="row boxShadow mx-lg-4 my-lg-5 mx-2 my-4" id="vis-3">
+            <div class="col-lg-9" id="column-3a"><a name="stateFacilitiesChart"></a>
+                <div id="vizContainer3">
+                </div>
             </div>
-            <div class="col-md-3 text-right" id="column-3b">
+            <div class="col-lg-3 text-right info-text mt-5 mt-lg-2" id="column-3b">
+                <h5>[2-3 sentences, context and references]</h5>
+                <p>"Learn more" button brings modal from the left</p>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#stateFacilitiesModal" id="btn-stateFacilitiesModal" class="btn btn-primary">Learn More</a>
+                <div class="modal fade bd-example-modal-lg" id="stateFacilitiesModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content" id="stateFacilities">
+                            <div class="modal-body">
+                                Here is additional information regarding the link related to state facilities.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="row boxShadow mx-4 my-5" id="vis-4">
+            <div class="col-lg-12" id="column-4b"><a name="facilitiesPerPopulationChart"></a>
+                <div id="vizContainer4">
+                    <object type="image/svg+xml" data="static/Mental_Health_Facilities_per_Population.svg"></object>
+                </div>
+            </div>
+            <div class="col-lg-12 text-right info-text mt-5 mt-lg-2" id="column-4a">
                 <h5>[2-3 sentences, context and references]</h5>
                 <p>"Learn more" button brings modal from the left</p>
             </div>
@@ -92,37 +154,21 @@ src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script> -->
     </div>
 </main>
 
-
-
-
-<div class="conclusion">
-        <h1>Thanks for visiting.</h1>
-        <p>There's help and steaks and fries and chicken pies and typing lots of words for fun to take up space. The quick brown fox jumped over the lazy dog. Lorem ipsum talcum powder.</p>
+<div class="text-center">
+        <img src="{{url_for('static', filename='Group-bro.png')}}" class="img-fluid"/>
 </div>
-{# modals #}
-<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" id="pulseData">
-            Here is additional information regarding the link related to pulse Data.
-        </div>
-    </div>
-</div>
+<footer>
+    <a href="https://www.womenwhocode.com/hackathon-social-good" class="hackathon-link">Women Who Code: Hackathon for Social Good 2022 </a><br>
+    <a href="https://www.linkedin.com/in/laurelmossor/" class="linkedin">Laurel Mossor</a> | 
+    <a href="https://www.linkedin.com/in/jolene-glenn/" class="linkedin">Jolene Glenn</a> | 
+    <a href="https://www.linkedin.com/in/jennifer-argote/" class="linkedin">Jenni Argote</a> | 
+    <a href="https://www.linkedin.com/in/jordyntaylor96/" class="linkedin">Jordyn Taylor</a> | 
+    <a href="https://www.linkedin.com/in/leilaniquesada/" class="linkedin">Leilani Quesada</a>
+</footer>
 
-<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" id="pulseData">
-            Here is additional information regarding the link related to pulse Data.
-        </div>
-    </div>
-</div>
 
-<div class="modal fade bd-example-modal-lg" id="pulseDataModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content" id="pulseData">
-            Here is additional information regarding the link related to pulse Data.
-        </div>
-    </div>
-</div>
+
+
 <script type="text/javascript">
     initViz("vizContainer1","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link");
     initViz("vizContainer2","https://public.tableau.com/views/SocialGoodHackathonVisualizations/Sheet2?:language=en-US&:display_count=n&:origin=viz_share_link");
