@@ -23,3 +23,6 @@ The application combines information from several sources, some of which can be 
     - Start the server w/ $python3 server.py
 
 ![Full page screenshot](static/screencapture-localhost-5000-2022-07-02-15_27_37.png)
+
+# Attributions
+People illustrations by [Storyset](https://storyset.com/people)
