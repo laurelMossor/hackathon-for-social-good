@@ -16,3 +16,6 @@ You’re Note Alone: Health Data in the US is a single page web app focused on b
     - Start the server w/ $python3 server.py
 
 ![Full page screenshot](static/screencapture-localhost-5000-2022-07-02-15_27_37.png)
+
+# Attributions
+People illustrations by [Storyset](https://storyset.com/people)
